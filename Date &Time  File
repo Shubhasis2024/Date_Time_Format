@@ -1,0 +1,65 @@
+/**********************************************************************/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDevelopment page</title>
+    <style>
+        
+        .container{
+            font-size: 25px;
+            border: 50px;
+            padding-bottom: 40px;
+            background-color:burlywood;
+            text-align: center;
+        }
+        .conatiner2
+        {
+            font-size: 25px;
+            border: 50px;
+            padding-bottom: 40px;
+            background-color:burlywood;
+            text-align: center;
+        }
+        #time{
+            font-weight: bold;
+        }
+        #time2{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>My page Heading</h1>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, deserunt vero amet repellendus ratione ipsa sed consectetur maxime facilis in quod sint nihil aperiam neque. Exercitationem, reprehenderit porro? Corporis recusandae officia optio voluptas, perspiciatis omnis quas dolore saepe tempora iure, temporibus facere cumque nulla earum nisi ad. Optio, voluptate ratione animi debitis excepturi quidem mollitia nostrum commodi delectus ipsam facilis, qui hic accusamus modi? Assumenda magnam porro rerum. Perspiciatis ex omnis vitae cumque quisquam! Tempora et iure libero nihil, facilis quam nulla nam dolor quisquam neque ratione unde, quo vitae, necessitatibus totam alias asperiores exercitationem? Itaque, ut sed ad velit deserunt veritatis repudiandae distinctio atque blanditiis corporis laboriosam molestiae ipsum totam nobis mollitia dolor. Fuga rem, deleniti neque tempore qui, omnis quod nostrum voluptatibus in laborum quia assumenda voluptatum facere eveniet maiores nobis corporis officia odio fugit suscipit, accusamus unde. Perspiciatis quo modi adipisci quasi fugiat inventore harum ea labore saepe? Tempora voluptate atque possimus in enim nostrum animi ipsum officia temporibus quod molestiae ducimus labore, voluptas tenetur odit, autem vero! Illum ratione repudiandae doloribus, quos, veritatis dicta tempore fugit consectetur, sequi illo eum quas aliquam fuga laborum iste praesentium dignissimos tempora optio! Inventore similique, temporibus quas provident, amet eos magni sint repudiandae soluta nulla esse quam praesentium maiores. Provident natus animi fugit debitis obcaecati, iure libero nulla modi accusamus in laborum dolores! Ab fuga ea dicta aliquid nemo vitae libero? Ad voluptas nam amet? Quos molestiae in laudantium debitis. Delectus, optio! Ducimus placeat, et maxime sapiente est ab rerum ea aspernatur, illum provident, suscipit quisquam?</p>
+
+    <h1>Time and Date</h1>
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+    <h1> The next time is</h1>
+    <div class="conatiner2">
+        <span id="time2"></span>
+    </div>
+    <script>
+        function time()
+        {
+            let time=new Date();
+            // console.log(time);
+            document.getElementById('time').innerHTML=time;
+        }
+        function time2()
+        {
+            let secondtime=new Date();
+            let options = { timeZone: 'America/New_York' };
+            let americanTimeDate = secondtime.toLocaleString('en-US', options);
+
+            document.getElementById('time2').innerHTML=americanTimeDate;
+        }
+
+        setInterval(time, 1000);
+        setInterval(time2, 1000);
+    </script>
+</body>
+</html>
